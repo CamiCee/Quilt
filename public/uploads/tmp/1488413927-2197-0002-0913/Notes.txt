@@ -1,0 +1,75 @@
+Try Shazam on Windows
+
+dev.wordpress@gmail.com
+codePress100
+
+Make a request for a coffeee machine before she leaves would be perfect if it was done by next week. Two weeks tops. That doesn't mean you shouldn't do it asap.
+
+Preterite and Imperfect
+Habla sobre que su vida en la escuela secundaria,
+what you used to do, what school your coming from, why it is well know, the history of the school, when it as founded, who your friends were, what they  were like.
+
+Check out mail chimp
+
+Berger Paints
+Kingston Wharves Ltd
+Blue Power Group Limited (BPOW)
+Caribbean Cream Limited (KREMI)
+Caribbean Flavours & Fragrances Limited (CFF)
+Derrimon Trading Company Limited (DTL)
+General Accident Insurance Company (JA) Limited (GENAC)
+
+
+Practice:
+NVDIA 
+
+ <% if user_signed_in? -%>
+                        <%= current_user.email %>
+                    <% end -%> <% if user_signed_in? -%>
+                        <%= current_user.email %>
+                    <% end -%>
+
+       Hacking Resources
+OWASP 
+Derbycon
+Defcon
+Black Hat Python - Justin Seitz
+PGP and it's implementations
+
+
+vulnerable linux
+milnet
+
+	Merge Tools
+tortisemerge 
+gitmerge
+
+Desde luego, el que no llora no mama. - Así es.It's pretty clear that if you don't ask you don't get. - That's true.
+
+Yo voy desde mi casa hasta la Universidad en carro/auto/coche
+
+
+GBmNAoGV
+Dropbox password is capital now
+
+font: normal 36px 'Cookie', cursive;
+Angular 1.6 for web dev 2
+
+When Chrome gets slow
+C:\WINDOWS\system32>netsh
+netsh>winsock reset
+
+Hall Comm Complaints 
+c.q.azph@gmail.com
+
+_ and T for uwisert password
+
+
+Send your feedback to FluentU using the contact information: claire@fluentu.com.
+
+Simple Moving Average
+Exponential Moving Average
+Channels
+Bollinger Bands
+Relative Strength Index
+Ichimoku  

@@ -1,0 +1,229 @@
+
+<!--                Body                -->
+
+<section class = "container-fluid">
+    
+   <!-- Banner  -->
+   
+   <nav class="navbar navbar-default navbar-fixed-top PublicBanner" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header ">
+                <a id = "PublicTitle" class="navbar-brand LabelColor" href="">&nbsp AZ Preston Hall</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbarCollapse">
+                <ul id = "LogBtnSpace" class="nav navbar-nav navbar-right">
+                    
+                  
+                    
+                    <li>
+                        <% if user_signed_in? -%>
+                            <%= link_to 'Dashboard', '/dashboard/newsfeed',:class => "btn" %>
+                        <% end -%>
+                    </li>
+                    
+                    <li>
+                       <% if !user_signed_in? -%>
+                            <%= link_to 'Sign up', new_user_registration_path, :class => "btn btn-default" %>
+                       <% end -%>
+                    </li>
+
+                    <li>
+                        <% if user_signed_in? -%>
+                            <%= link_to 'Log out', destroy_user_session_path ,method: :delete, :class => "btn btn-default" %>
+                        <% else -%>
+                            <%= link_to 'Login', new_user_session_path, :class => "btn btn-default" %>
+                        <% end -%>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- First division-->
+ 
+    <section id = "DivOne" class = "carousel slide DivSize">
+         <!--Indicators-->
+        <ol class = "carousel-indicators">
+            <li data-target = "#DivOne" data-slide-to = "0" class = "active"></li>
+            <li data-target = "#DivOne" data-slide-to = "1"></li>
+            <li data-target = "#DivOne" data-slide-to = "2"></li>
+        </ol>
+        
+         <!--Wrapper for Slides-->
+        
+        <div class = "carousel-inner" role = "listbox">
+            
+            <!-- First Image-->
+            <section  class = "MainContent1 Parallax row item active">
+                
+                <section class = "MainText">
+                        <h1 id = "Title">AZ Preston Hall</h1>
+                        <h2 id = "Sub">In Relentless Pursuit of Excellence</h2>
+                </section>
+           </section>
+                
+                
+            <!-- Second Image -->
+            <section  class = "MainContent2 Parallax row item">
+                <section class = "MainText">
+                        <h1 id = "Title">AZ Preston Hall</h1>
+                        <h2 id = "Sub">In Relentless Pursuit of Excellence</h2>  
+                </section>
+           </section>
+            
+               
+          <!--Third Image -->
+            <section  class = "MainContent3 Parallax row item">
+                <section class = "MainText">
+                        <h1 id = "Title">AZ Preston Hall</h1>
+                        <h2 id = "Sub">In Relentless Pursuit of Excellence</h2>  
+                </section>  
+           </section>
+        </div>
+    </section>
+    
+    
+    <!-- Second division -->
+    
+    
+    <section id = "DivTwo" class = "DivSize">
+        
+       <h1 class = "DivTitle">Home of the Sharks</h1>
+       
+       <p class = "DivContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non justo sed metus fermentum dignissim. Etiam elit neque, 
+          imperdiet ut leo vitae, eleifend tristique odio. Quisque venenatis rhoncus congue. Pellentesque laoreet metus vitae 
+          condimentum lobortis. Nulla iaculis, ipsum sed aliquam porttitor, justo dui ultrices felis, non vestibulum nunc arcu sit amet
+          magna. Aliquam purus risus, consequat ut mauris vitae, tincidunt pulvinar ex. Vestibulum non felis ligula. Integer in iaculis
+          urna, ut imperdiet lectus. Aliquam varius vehicula velit, eu ultricies turpis aliquam ac. Cras sollicitudin neque non ultrices
+          fermentum. Quisque tristique euismod elementum. Nam scelerisque diam non purus aliquet, vitae aliquet leo interdum. 
+          Pellentesque tincidunt turpis vel quam posuere, ut cursus dui condimentum. Proin elit augue, sollicitudin et cursus sit amet,
+          dapibus at augue. Vivamus lobortis, odio vel fringilla lacinia, lectus metus imperdiet lectus, ac tempor magna ex sed velit.
+          Phasellus tempor consectetur ligula, et laoreet turpis sollicitudin quis.
+        </p>
+        
+         <section class = "DivBtnContainer">
+             <%= link_to 'Learn More', '/about', :class => "btn btn-default" %>
+         </section>  
+        
+    </section>
+    
+    
+    <!-- Third division -->
+    
+    <section id = "DivThree" class = "DivSize">
+        
+        
+        <!--Preston video-->
+        <!--Video hosted on vimeo, emebed was resized to be responsiive by: http://embedresponsively.com/ -->
+        <div class='embed-container'>
+            <iframe src="https://player.vimeo.com/video/200537144?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    
+    <!-- Fourth division -->
+    
+    <section id = "DivFour" class = "DivSize">
+       <h1 class = "DivTitle">One Hall, Thirteen Homes</h1>
+       
+       <p class = "DivContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non justo sed metus fermentum dignissim. Etiam elit neque, 
+          imperdiet ut leo vitae, eleifend tristique odio. Quisque venenatis rhoncus congue. Pellentesque laoreet metus vitae 
+          condimentum lobortis. Nulla iaculis, ipsum sed aliquam porttitor, justo dui ultrices felis, non vestibulum nunc arcu sit amet
+          magna. Aliquam purus risus, consequat ut mauris vitae, tincidunt pulvinar ex. Vestibulum non felis ligula. Integer in iaculis
+          urna, ut imperdiet lectus. Aliquam varius vehicula velit, eu ultricies turpis aliquam ac. Cras sollicitudin neque non ultrices
+          fermentum. Quisque tristique euismod elementum. Nam scelerisque diam non purus aliquet, vitae aliquet leo interdum. 
+          Pellentesque tincidunt turpis vel quam posuere, ut cursus dui condimentum. Proin elit augue, sollicitudin et cursus sit amet,
+          dapibus at augue. Vivamus lobortis, odio vel fringilla lacinia, lectus metus imperdiet lectus, ac tempor magna ex sed velit.
+          Phasellus tempor consectetur ligula, et laoreet turpis sollicitudin quis.
+        </p>
+        
+        <section class = "DivBtnContainer">
+             <%= link_to 'See the Clusters', '/clusters', :class => "btn btn-default" %>
+         </section>  
+    </section>
+    
+    
+    <!-- Fifth division -->
+    
+    <section id = "DivFive" class = "DivSize Parallax">
+               <section class = "MainText">
+                        <h1 id = "Title">AZ Preston Hall</h1>
+                        <h2 id = "Sub">In Relentless Pursuit of Excellence</h2>
+                </section>
+    </section>
+    
+     <!-- Sixth division -->
+    
+    <section id = "DivSix" class = "DivSize">
+       <h1 class = "DivTitle">Student Leadership at its Finest</h1>
+       
+       <p class = "DivContent">
+           The AZ Preston Hall Committee is a ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non justo sed metus fermentum dignissim. Etiam elit neque, 
+          imperdiet ut leo vitae, eleifend tristique odio. Quisque venenatis rhoncus congue. Pellentesque laoreet metus vitae 
+          condimentum lobortis. Nulla iaculis, ipsum sed aliquam porttitor, justo dui ultrices felis, non vestibulum nunc arcu sit amet
+          magna. Aliquam purus risus, consequat ut mauris vitae, tincidunt pulvinar ex. Vestibulum non felis ligula. Integer in iaculis
+          urna, ut imperdiet lectus. Aliquam varius vehicula velit, eu ultricies turpis aliquam ac. Cras sollicitudin neque non ultrices
+          fermentum. Quisque tristique euismod elementum. Nam scelerisque diam non purus aliquet, vitae aliquet leo interdum. 
+          Pellentesque tincidunt turpis vel quam posuere, ut cursus dui condimentum. Proin elit augue, sollicitudin et cursus sit amet,
+          dapibus at augue. Vivamus lobortis, odio vel fringilla lacinia, lectus metus imperdiet lectus, ac tempor magna ex sed velit.
+          Phasellus tempor consectetur ligula, et laoreet turpis sollicitudin quis.
+        </p>
+        
+        <section class = "DivBtnContainer">
+             <%= link_to 'Meet the Members', '/gov', :class => "btn btn-default" %>
+         </section>  
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer class = "footer footer-distributed">
+        
+        <div class="footer-left">
+            
+
+			<h3>AZ Preston Hall</h3>
+
+				<p class="footer-company-name">AZ Preston Hall Committee &copy; 2017</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>The A.Z. Preston Hall</span> Kingston, Jamaica</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 (876) 977-6721-3</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:c.q.azph@gmail.com">c.q.azph@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Around the Web</span>
+				</p>
+
+				<div class="footer-icons">
+            
+					<a href="https://www.facebook.com/aston.prestonhall/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/azprestonhall?lang=en"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/azprestonhall/"><i class="fa fa-instagram"></i></a>
+
+				</div>
+
+			</div>
+       
+    </footer>
+    
+</section>

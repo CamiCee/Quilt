@@ -1,0 +1,259 @@
+<!--                Body                -->
+
+<section class = "container-fluid">
+    
+   <!-- Banner  -->
+   
+   <nav class="navbar navbar-default navbar-fixed-top PublicBanner" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header ">
+                <a id = "PublicTitle" class="navbar-brand LabelColor" href="">&nbsp AZ Preston Hall</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbarCollapse">
+                <ul id = "LogBtnSpace" class="nav navbar-nav navbar-right">
+                    
+                  
+                    
+                    <li>
+                        <% if user_signed_in? -%>
+                            <%= link_to 'Dashboard', '/dashboard/newsfeed',:class => "btn" %>
+                        <% end -%>
+                    </li>
+                    
+                    <li>
+                       <% if !user_signed_in? -%>
+                            <%= link_to 'Sign up', new_user_registration_path, :class => "btn btn-default" %>
+                       <% end -%>
+                    </li>
+                    
+                    <li>
+                        <% if user_signed_in? -%>
+                            <%= link_to 'Log out', destroy_user_session_path ,method: :delete, :class => "btn btn-default" %>
+                        <% else -%>
+                            <%= link_to 'Login', new_user_session_path, :class => "btn btn-default" %>
+                        <% end -%>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+      <!-- Content -->
+      
+      <section id = "EditPage" class = "container-fluid">
+          
+            <% if current_user.first_name !=  "" %>
+                <h2>current_user.first_name </h2>
+            
+            <% else %>
+              <h2>Account</h2>
+            <% end %>
+          
+      <%= form_for(resource, as: resource_name,:html=> {:class => "LoginForm"}, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+      
+        <div class = "form-group">
+        
+            <div class="Field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, :class => "form-control" %>
+            </div>
+          
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+          
+            <div class="Field">
+              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+              <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
+              <% if @minimum_password_length %>
+                <br />
+                <em><%= @minimum_password_length %> characters minimum</em>
+              <% end %>
+            </div>
+          
+            <div class="Field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
+            </div>
+          
+            <div class="Field">
+              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+              <%= f.password_field :current_password, autocomplete: "off", :class => "form-control" %>
+            </div>
+        
+        </div>
+        
+        <div class = "form-group">
+          
+        
+              <div class="Field">
+                <%= f.label :first_name %> <br />
+                <%= f.text_field :first_name, autocomplete: "off", :class => "form-control" %>
+              </div>
+              
+              <div class="Field">
+                <%= f.label :last_name %> <br />
+                <%= f.text_field :last_name, autocomplete: "off", :class => "form-control" %>
+              </div>
+              
+              
+              <div class="Field">
+                <%= f.label :hall_name %> <br />
+                <%= f.text_field :hall_name, autocomplete: "off", :class => "form-control" %>
+              </div>
+        
+        </div>
+        
+        <div class = "form-group">
+        
+              <div class="Field">
+                <%= f.label :faculty %> <br />
+                <%= f.text_field :faculty, autocomplete: "off", :class => "form-control" %>
+              </div>
+              
+              <div class="Field">
+                <%= f.label :first_major %> <br />
+                <%= f.text_field :first_major, autocomplete: "off", :class => "form-control" %>
+              </div>
+              
+              <div class="Field">
+                <%= f.label :second_major %> <br />
+                <%= f.text_field :second_major, autocomplete: "off", :class => "form-control" %>
+              </div>
+              
+              <div class="Field">
+                <%= f.label :minor %> <br />
+                <%= f.text_field :minor, autocomplete: "off", :class => "form-control" %>
+              </div>
+              
+              <div class="Field">
+                <%= f.label :status %> <br />
+                <%= f.text_field :status, autocomplete: "off", :class => "form-control" %>
+              </div>
+        
+        </div>
+        
+      
+        <div class="actions">
+          <%= f.submit "Update" %>
+        </div>
+      <% end %>
+      
+      
+    
+
+      <div class="accordion">
+          <ul>
+              <li>
+                  <input type="radio" name="select" class="accordion-select" checked />
+                  <div class="accordion-title">
+                      <span>Title</span>
+                  </div>
+                  <div class="accordion-content">
+                      Content
+                  </div>
+                  <div class="accordion-separator"></div>
+              </li>
+              <li>
+                  <input type="radio" name="select" class="accordion-select" />
+                  <div class="accordion-title">
+                      <span>Title</span>
+                  </div>
+                  <div class="accordion-content">
+                      Content
+                  </div>
+                  <div class="accordion-separator"></div>
+              </li>
+              <li>
+                  <input type="radio" name="select" class="accordion-select" />
+                  <div class="accordion-title">
+                      <span>Title</span>
+                  </div>
+                  <div class="accordion-content">
+                      Content
+                  </div>
+                  <div class="accordion-separator"></div>
+              </li>
+              <li>
+                  <input type="radio" name="select" class="accordion-select" />
+                  <div class="accordion-title">
+                      <span>Title</span>
+                  </div>
+                  <div class="accordion-content">
+                      Content
+                  </div>
+                  <div class="accordion-separator"></div>
+              </li>
+          </ul>
+      </div>
+      <div style="text-align:center;margin-top:50px;">
+          <a href="http://accordionslider.com/" style="color:#568EEA;text-decoration:none;">
+              Css Accordion Slider Generator
+          </a>
+      </div>
+
+
+
+      <h3>Cancel my account</h3>
+      
+      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      
+      <%= link_to "Back", :back %>
+
+  </section>
+ 
+    
+    <!-- Footer -->
+    <footer class = "footer footer-distributed">
+        
+        <div class="footer-left">
+            
+
+			<h3>AZ Preston Hall</h3>
+
+				<p class="footer-company-name">AZ Preston Hall Committee &copy; 2017</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>The A.Z. Preston Hall</span> Kingston, Jamaica</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 (876) 977-6721-3</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:c.q.azph@gmail.com">c.q.azph@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Around the Web</span>
+				</p>
+
+				<div class="footer-icons">
+            
+					<a href="https://www.facebook.com/aston.prestonhall/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/azprestonhall?lang=en"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/azprestonhall/"><i class="fa fa-instagram"></i></a>
+
+				</div>
+
+			</div>
+       
+    </footer>
+    
+</section>

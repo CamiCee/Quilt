@@ -1,0 +1,90 @@
+<% content_for :head do %>
+    <title>Dashboard - AZ Preston</title>
+<% end %>
+
+<section class = "container-fluid">
+    
+    <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top DashNav" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="#">AZ Preston Hall</a>
+                
+                 <!-- Toggle Button-->
+                <a href="javascript:void(0)" class="ToggleIcon closebtn" onclick="toggleNav()">
+                    <i class="fa fa-bars ToggleColor" aria-hidden="true"></i>
+                </a>
+           
+            </div>
+            
+            <!-- Top Menu Items -->
+            
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul id = "MainDashMenu" class="nav navbar-nav side-nav DashNav">
+             
+                    <li class = "DashLinkList">
+                         <%= link_to '<i class="fa fa-newspaper-o" aria-hidden="true"></i> Newsfeed'.html_safe,"../dashboard/newsfeed", class: "DashLink"  %>
+                    </li>
+                    
+                    
+                    <li class = "DashLinkActive DashLinkList">
+                        <%= link_to '<i class="fa fa-book" aria-hidden="true"></i> BLS'.html_safe,"../dashboard/bls", class: "DashLink"  %>
+                        
+                        
+                    </li>
+                    
+                    <li class = "DashLinkList">
+                        <%= link_to '<i class="fa fa-calendar" aria-hidden="true"></i> Calendar'.html_safe,"../dashboard/calendar", class: "DashLink"  %>
+                    </li>
+                    
+                    <li class = "DashLinkList">
+                       <%= link_to '<i class="fa fa-graduation-cap" aria-hidden="true"></i> PASS'.html_safe,"../dashboard/pass", class: "DashLink"  %>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        
+    
+       
+    <!-- BLS - New Book --> 
+    
+    <div id="Main">
+         <% if !@doc.errors.empty? %>
+            <div class = "alert alert-error">
+               
+               <ul>
+                  <% @doc.errors.full_messages.each do |msg| %>
+                     <li><%= msg %></li>
+                  <% end %>
+               </ul>
+               
+            </div>
+         <% end %>
+         
+         <div class = "well">
+            <%= form_for @doc, html: { multipart: true } do |f| %>
+               <%= f.label :name %>
+               <%= f.text_field :name %>
+               <%= f.label :attachment %>
+               <%= f.file_field :attachment %>
+               <%= f.submit "Save", class: "btn btn-primary" %>
+            <% end %>
+         </div>
+   </div>
+    
+   
+    
+   
+
+</section> 

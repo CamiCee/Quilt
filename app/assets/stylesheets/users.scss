@@ -1,0 +1,31 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//Custom Content
+
+
+.ToggleIcon
+{
+    font-size: 18px;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.ToggleIcon:hover
+{
+    cursor:pointer;
+    background-color: #340451; 
+    border-bottom: 1px solid rebeccapurple;
+}
+
+.ToggleColor
+{
+    color: white;
+}
+
+

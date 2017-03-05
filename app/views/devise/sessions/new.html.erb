@@ -1,0 +1,51 @@
+<section class ="wrapper container-fluid">
+     <nav class = "navbar navbar-default NavLogin">
+         <section class = "navbar-header">
+                <%= link_to "AZ Preston Hall", root_path, class: "navbar-brand NavLogin  LabelColor" %>
+         </section>
+    </nav>
+    
+    
+    <div id="middle" class = "container-fluid ">
+        
+         <%= form_for(resource, as: resource_name,:html=> {:class => "LoginForm"}, url: session_path(resource_name)) do |f| %>
+            <h2 class = "LogTitle">One More Step...</h2>
+            
+            <%= image_tag("Logo.png", class: "img-circle img-responsive LogoSize") %>
+        
+            <div class="input-group Space">
+                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                <%= f.email_field :email, :placeholder => "Email ", class: "RegInput form-control", autofocus: true %>
+            </div>
+        
+            <div class="input-group Space">
+                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                 <%= f.password_field :password, :placeholder => "Password", class: "RegInput form-control", autocomplete: "off" %>
+            </div>
+        
+            <% if devise_mapping.rememberable? -%>
+                <div>
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me, :class => "LabelColor" %>
+                </div>
+            <% end -%>
+    
+            
+           
+            <%= f.submit "Log in", class: "center-block btn btn default" %>
+        
+            <%= render "devise/shared/links" %>
+        <% end %>
+    </div>
+    
+    
+    
+    <footer id="bottom" class = "Sessionsfooter container-fluid">
+        <p class = "text-muted FooterText">&copy; 2016 Aston Preston Hall</p>
+    </footer>
+   
+</section>
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    
+    <% if content_for?(:head) %>
+        <%= content_for(:head) %>
+    <% else %>
+        <title>AZ Preston Hall</title>
+    <% end %>
+  <!--   
+  ___   ______ ______              _                _   _       _ _ 
+ / _ \ |___  / | ___ \            | |              | | | |     | | |
+/ /_\ \   / /  | |_/ / __ ___  ___| |_ ___  _ __   | |_| | __ _| | |
+|  _  |  / /   |  __/ '__/ _ \/ __| __/ _ \| '_ \  |  _  |/ _` | | |
+| | | |./ /___ | |  | | |  __/\__ \ || (_) | | | | | | | | (_| | | |
+\_| |_/\_____/ \_|  |_|  \___||___/\__\___/|_| |_| \_| |_/\__,_|_|_|
+                                                                    
+    -->
+                <!--Developer: Hakeem Clarke-->
+                   
+
+                <!--Site Data-->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content= "width=device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "author" content = "Hakeem Clarke">
+    <meta name = "description" content = "AZ Preston">
+    
+
+
+                <!--Bootstrap CSS Link-->    
+    <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+    
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+
+   
+</head>
+    
+<body>
+    
+    <div class="container">
+        <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>">
+                <%= value %>
+            </div>
+        <% end %>
+    </div>
+
+    <%= yield %>
+ 
+    <!--    Link to javascript -->
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    
+    <!--Bootstrap.js-->
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <!--Jquery UI-->
+    <script   src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"   integrity="sha256-xI/qyl9vpwWFOXz7+x/9WkG5j/SVnSw21viy8fWwbeE="   crossorigin="anonymous"></script>
+    
+    
+</body>
+    
+</html>

@@ -1,0 +1,463 @@
+// Place all the styles related to the Public controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+                                                    /* Welome Page */
+
+/*Entire Body*/
+
+.container-fluid
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.row
+{
+    margin: 0px;
+}
+
+//Banner
+.PublicBanner
+{
+    border: 1px solid rebeccapurple;
+}
+
+#PublicTitle 
+{
+	color: rebeccapurple !important;
+}
+
+/*Content Slides*/
+.MainContent1
+{
+    width: 100%;
+    height: 100%;
+    background: url("StockOne.jpg") no-repeat fixed center;  
+}
+
+.MainContent2
+{
+    width: 100%;
+    height: 100%;
+    background: url("StockTwo.jpg") no-repeat fixed center;  
+}
+
+
+.MainContent3
+{
+    width: 100%;
+    height: 100%;
+    background: url("StockThree.jpg") no-repeat fixed center;  
+}
+
+.Parallax
+{
+	/* Create a parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Nav Bar*/
+.navbar
+{
+    margin-bottom: 0px;
+    border-bottom: 1px solid rebeccapurple;
+}
+
+.NavWidth
+{
+    width: 100%;
+}
+
+.NavRight
+{
+    float: right;
+}
+
+
+#Banner
+{
+    height: 10%;
+    width: 100%;
+    background-color: white;
+}
+
+/* Login and sign up buttons*/
+.LabelColor
+{
+    color: rebeccapurple !important;
+}
+
+.LabelBtn{
+	border: 1px solid rebeccapurple;
+}
+
+.navbar-nav>li>a {
+	margin-top: 5px;
+	margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-nav>li>a:hover {
+    color: white !important;
+    background-color: rebeccapurple !important; 
+}
+
+                                                        /*Main Sections*/
+
+
+/* Carousel */
+
+
+#DivOne
+{
+    margin-top: -10%;
+}
+
+.carousel-indicators .active
+{
+    background-color: rebeccapurple;
+
+}
+
+.carousel-indicators
+{
+    height: 5%;
+    width: 8%;
+    margin-left: -5%;
+    border-radius: 6px;
+    background-color: black;
+}
+
+.carousel-indicators li
+{
+    opacity: 1;
+    background-color: white;
+}
+
+.DivSize
+{
+    width: 100%;
+    height: 20%;
+}
+
+.DivTitle
+{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.DivContent
+{
+    margin-bottom: 2%;
+    padding: 0 2% 0 2%; //top right bottom left
+}
+
+.DivBtnContainer
+{
+   text-align: center; 
+   margin-top: 5%;
+   margin-bottom: 5%;
+}
+
+#DivTwo
+{
+    
+}
+
+#DivThree
+{
+    
+}
+
+/* Video */
+.embed-container 
+{ 
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%; 
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed 
+{ 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#LogBtnSpace
+{
+    padding-right: 2%;
+}
+
+#DivFour
+{
+    
+}
+
+#DivFive
+{
+    width: 100%;
+    height: 100%; 
+    background-image: url("StockFour.jpg");
+    background-size: 100%;
+}
+
+#DivSize
+{
+    
+}
+
+
+/*Main Text*/
+
+.MainText
+{
+   text-align: center; 
+   margin-top: 20%;
+   text-shadow: 1px 1px rebeccapurple;
+}
+
+
+#Title
+{
+    color:white;
+    font-size: 40px;
+}
+
+#Sub
+{
+    color:white;
+    padding-bottom: 30%;
+}
+
+
+.Social
+{
+   height: 50%;
+   width: 50%;
+}
+
+.SocialList
+{
+    width: 10%;
+    margin-left: 35%;
+    list-style:none;
+}
+
+.SocialList li
+{
+    float: left;
+}
+
+.UWI
+{
+    color: rebeccapurple;
+    font-size: 250%;
+    margin-left: -35%;
+}
+
+.UWI:hover
+{
+    color: rebeccapurple;
+    text-decoration: none;
+}
+
+.FooterLogo
+{
+	color: rebeccapurple;
+}
+
+//Sticky Footer CSS from https://getbootstrap.com/examples/sticky-footer/sticky-footer.css
+
+.footer 
+{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 5%;
+  background-color: white;
+}
+
+
+//Footer design from http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  rebeccapurple;
+	margin: 0;
+    font-size: 36px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  rebeccapurple;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
