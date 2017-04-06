@@ -8,7 +8,7 @@
    <nav class="navbar navbar-default navbar-fixed-top PublicBanner" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header ">
-                <a id = "PublicTitle" class="navbar-brand LabelColor" href="">&nbsp AZ Preston Hall</a>
+               <%= link_to '&nbsp AZ Preston Hall'.html_safe, root_path,:id => "PublicTitle", :class => "navbar-brand LabelColor" %>
             </div>
 
             <div class="collapse navbar-collapse navbarCollapse">
@@ -42,6 +42,33 @@
         </div>
     </nav>
 
+    <!-- Content -->
+    
+    <section  id = "AboutDiv" class = "DivSize Parallax">
+               <section class = "MainText">
+                        <h1 id = "Title">AZ Preston Hall</h1>
+                        <h2 id = "Sub">Home of the Sharks</h2>
+                </section>
+    </section>
+    
+    
+    
+    <section id = "DivTwo" class = "DivSize">
+       
+       <p class = "DivContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non justo sed metus fermentum dignissim. Etiam elit neque, 
+          imperdiet ut leo vitae, eleifend tristique odio. Quisque venenatis rhoncus congue. Pellentesque laoreet metus vitae 
+          condimentum lobortis. Nulla iaculis, ipsum sed aliquam porttitor, justo dui ultrices felis, non vestibulum nunc arcu sit amet
+          magna. Aliquam purus risus, consequat ut mauris vitae, tincidunt pulvinar ex. Vestibulum non felis ligula. Integer in iaculis
+          urna, ut imperdiet lectus. Aliquam varius vehicula velit, eu ultricies turpis aliquam ac. Cras sollicitudin neque non ultrices
+          fermentum. Quisque tristique euismod elementum. Nam scelerisque diam non purus aliquet, vitae aliquet leo interdum. 
+          Pellentesque tincidunt turpis vel quam posuere, ut cursus dui condimentum. Proin elit augue, sollicitudin et cursus sit amet,
+          dapibus at augue. Vivamus lobortis, odio vel fringilla lacinia, lectus metus imperdiet lectus, ac tempor magna ex sed velit.
+          Phasellus tempor consectetur ligula, et laoreet turpis sollicitudin quis.
+        </p>
+        
+    
+        
+    </section>
  
     
     <!-- Footer -->

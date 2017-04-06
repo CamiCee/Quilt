@@ -49,5 +49,5 @@ gem 'devise', '~> 4.2'
 
 #File Uploads
 gem 'carrierwave', '~> 0.11.2'
-
+gem 'cloudinary'
 

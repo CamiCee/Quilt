@@ -52,158 +52,164 @@
             <% else %>
               <h2>Account</h2>
             <% end %>
-          
-      <%= form_for(resource, as: resource_name,:html=> {:class => "LoginForm"}, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <%= devise_error_messages! %>
-      
-        <div class = "form-group">
-        
-            <div class="Field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, :class => "form-control" %>
-            </div>
-          
-            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-            <% end %>
-          
-            <div class="Field">
-              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-              <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
-              <% if @minimum_password_length %>
-                <br />
-                <em><%= @minimum_password_length %> characters minimum</em>
-              <% end %>
-            </div>
-          
-            <div class="Field">
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
-            </div>
-          
-            <div class="Field">
-              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-              <%= f.password_field :current_password, autocomplete: "off", :class => "form-control" %>
-            </div>
-        
-        </div>
-        
-        <div class = "form-group">
-          
-        
-              <div class="Field">
-                <%= f.label :first_name %> <br />
-                <%= f.text_field :first_name, autocomplete: "off", :class => "form-control" %>
-              </div>
-              
-              <div class="Field">
-                <%= f.label :last_name %> <br />
-                <%= f.text_field :last_name, autocomplete: "off", :class => "form-control" %>
-              </div>
-              
-              
-              <div class="Field">
-                <%= f.label :hall_name %> <br />
-                <%= f.text_field :hall_name, autocomplete: "off", :class => "form-control" %>
-              </div>
-        
-        </div>
-        
-        <div class = "form-group">
-        
-              <div class="Field">
-                <%= f.label :faculty %> <br />
-                <%= f.text_field :faculty, autocomplete: "off", :class => "form-control" %>
-              </div>
-              
-              <div class="Field">
-                <%= f.label :first_major %> <br />
-                <%= f.text_field :first_major, autocomplete: "off", :class => "form-control" %>
-              </div>
-              
-              <div class="Field">
-                <%= f.label :second_major %> <br />
-                <%= f.text_field :second_major, autocomplete: "off", :class => "form-control" %>
-              </div>
-              
-              <div class="Field">
-                <%= f.label :minor %> <br />
-                <%= f.text_field :minor, autocomplete: "off", :class => "form-control" %>
-              </div>
-              
-              <div class="Field">
-                <%= f.label :status %> <br />
-                <%= f.text_field :status, autocomplete: "off", :class => "form-control" %>
-              </div>
-        
-        </div>
-        
-      
-        <div class="actions">
-          <%= f.submit "Update" %>
-        </div>
-      <% end %>
       
       
-    
+      <!--Accordion courtesy of Raúl Barrera at http://codepen.io/raubaca/pen/PZzpVe -->
+      
+        
+          <div class="accordion">
+            
+            <div class="tab">
+              <input id="tab-one" type="checkbox" name="tabs">
+              <label for="tab-one">Account</label>
+              <div class="tab-content">
+                  <%= form_for(resource, as: resource_name,:html=> {:class => "LoginForm"}, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                      <%= devise_error_messages! %>
+                    
+                      <div class = "form-group">
+                      
+                          <div class="Field">
+                            <%= f.label :email %><br />
+                            <%= f.email_field :email, autofocus: true, :class => "form-control" %>
+                          </div>
+                        
+                          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                          <% end %>
+                        
+                          <div class="Field">
+                            <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+                            <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
+                            <% if @minimum_password_length %>
+                              <br />
+                              <em><%= @minimum_password_length %> characters minimum</em>
+                            <% end %>
+                          </div>
+                        
+                          <div class="Field">
+                            <%= f.label :password_confirmation %><br />
+                            <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
+                          </div>
+                        
+                          <div class="Field">
+                            <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                            <%= f.password_field :current_password, autocomplete: "off", :class => "form-control" %>
+                          </div>
+                          
+                          <div class="actions">
+                            <%= f.submit "Update", :class=> "btn" %>
+                          </div>
+                          
+                        </div>
+                          
+                          
+                      <% end %>  
+               
+              </div>
+            </div>
+            
+            <div class="tab">
+              <input id="tab-two" type="checkbox" name="tabs">
+              <label for="tab-two">ID</label>
+              <div class="tab-content">
+                    <%= form_for(resource, as: resource_name,:html=> {:class => "LoginForm"}, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                    <%= devise_error_messages! %>
+                    <div class = "form-group">
+                      
+                    
+                          <div class="Field">
+                            <%= f.label :first_name %> <br />
+                            <%= f.text_field :first_name, autocomplete: "off", :class => "form-control" %>
+                          </div>
+                          
+                          <div class="Field">
+                            <%= f.label :last_name %> <br />
+                            <%= f.text_field :last_name, autocomplete: "off", :class => "form-control" %>
+                          </div>
+                          
+                          
+                          <div class="Field">
+                            <%= f.label :hall_name %> <br />
+                            <%= f.text_field :hall_name, autocomplete: "off", :class => "form-control" %>
+                          </div>
+                          
+                          
+                          <div class="Field">
+                            <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                            <%= f.password_field :current_password, autocomplete: "off", :class => "form-control" %>
+                          </div>
+                          
+                          <div class="actions">
+                            <%= f.submit "Update", :class=> "btn" %>
+                          </div>                    
+                    </div>
+                    
 
-      <div class="accordion">
-          <ul>
-              <li>
-                  <input type="radio" name="select" class="accordion-select" checked />
-                  <div class="accordion-title">
-                      <span>Title</span>
+                    
+                    <% end %>
+  
+                </div>
+              </div>
+              
+              <div class="tab">
+                <input id="tab-three" type="checkbox" name="tabs">
+                <label for="tab-three">Academic</label>
+                <div class="tab-content">
+                  
+                  <%= form_for(resource, as: resource_name,:html=> {:class => "LoginForm"}, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                  <%= devise_error_messages! %>
+                  <div class = "form-group">
+                  
+                        <div class="Field">
+                          <%= f.label :faculty %> <br />
+                          <%= f.text_field :faculty, autocomplete: "off", :class => "form-control" %>
+                        </div>
+                        
+                        <div class="Field">
+                          <%= f.label :first_major %> <br />
+                          <%= f.text_field :first_major, autocomplete: "off", :class => "form-control" %>
+                        </div>
+                        
+                        <div class="Field">
+                          <%= f.label :second_major %> <br />
+                          <%= f.text_field :second_major, autocomplete: "off", :class => "form-control" %>
+                        </div>
+                        
+                        <div class="Field">
+                          <%= f.label :minor %> <br />
+                          <%= f.text_field :minor, autocomplete: "off", :class => "form-control" %>
+                        </div>
+                        
+                        <div class="Field">
+                          <%= f.label :status %> <br />
+                          <%= f.text_field :status, autocomplete: "off", :class => "form-control" %>
+                        </div>
+                        
+                        <div class="Field">
+                          <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                          <%= f.password_field :current_password, autocomplete: "off", :class => "form-control" %>
+                        </div>
+                        
+                        <div class="actions">
+                          <%= f.submit "Update", :class=> "btn" %>
+                        </div>
                   </div>
-                  <div class="accordion-content">
-                      Content
-                  </div>
-                  <div class="accordion-separator"></div>
-              </li>
-              <li>
-                  <input type="radio" name="select" class="accordion-select" />
-                  <div class="accordion-title">
-                      <span>Title</span>
-                  </div>
-                  <div class="accordion-content">
-                      Content
-                  </div>
-                  <div class="accordion-separator"></div>
-              </li>
-              <li>
-                  <input type="radio" name="select" class="accordion-select" />
-                  <div class="accordion-title">
-                      <span>Title</span>
-                  </div>
-                  <div class="accordion-content">
-                      Content
-                  </div>
-                  <div class="accordion-separator"></div>
-              </li>
-              <li>
-                  <input type="radio" name="select" class="accordion-select" />
-                  <div class="accordion-title">
-                      <span>Title</span>
-                  </div>
-                  <div class="accordion-content">
-                      Content
-                  </div>
-                  <div class="accordion-separator"></div>
-              </li>
-          </ul>
-      </div>
-      <div style="text-align:center;margin-top:50px;">
-          <a href="http://accordionslider.com/" style="color:#568EEA;text-decoration:none;">
-              Css Accordion Slider Generator
-          </a>
-      </div>
-
-
+                  
+                 
+                  <% end %>
+              </div>
+            </div>
+            
+          </div>
+          
+         
+     
 
       <h3>Cancel my account</h3>
       
-      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class=> "btn" %></p>
       
-      <%= link_to "Back", :back %>
+      
 
   </section>
  
