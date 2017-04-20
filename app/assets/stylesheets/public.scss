@@ -20,12 +20,12 @@
 //Banner
 .PublicBanner
 {
-    border: 1px solid rebeccapurple;
+    border: 1px solid #7EC0EE;
 }
 
 #PublicTitle 
 {
-	color: rebeccapurple !important;
+	color: #7EC0EE !important;
 }
 
 /*Content Slides*/
@@ -64,7 +64,7 @@
 .navbar
 {
     margin-bottom: 0px;
-    border-bottom: 1px solid rebeccapurple;
+    border-bottom: 1px solid #7EC0EE;
 }
 
 .NavWidth
@@ -85,26 +85,30 @@
     background-color: white;
 }
 
+.DashSign
+{
+	margin-right: 8%;
+}
+
 /* Login and sign up buttons*/
 .LabelColor
 {
-    color: rebeccapurple !important;
+    color: #7EC0EE !important;
 }
 
 .LabelBtn{
-	border: 1px solid rebeccapurple;
+	border: 1px solid #7EC0EE;
 }
 
 .navbar-nav>li>a {
 	margin-top: 5px;
-	margin-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
 .navbar-nav>li>a:hover {
     color: white !important;
-    background-color: rebeccapurple !important; 
+    background-color: #7EC0EE !important; 
 }
 
                                                         /*Main Sections*/
@@ -120,7 +124,7 @@
 
 .carousel-indicators .active
 {
-    background-color: rebeccapurple;
+    background-color: #7EC0EE;
 
 }
 
@@ -226,7 +230,7 @@
 {
    text-align: center; 
    margin-top: 20%;
-   text-shadow: 1px 1px rebeccapurple;
+   text-shadow: 1px 1px #7EC0EE;
 }
 
 
@@ -263,20 +267,20 @@
 
 .UWI
 {
-    color: rebeccapurple;
+    color: #7EC0EE;
     font-size: 250%;
     margin-left: -35%;
 }
 
 .UWI:hover
 {
-    color: rebeccapurple;
+    color: #7EC0EE;
     text-decoration: none;
 }
 
 .FooterLogo
 {
-	color: rebeccapurple;
+	color: #7EC0EE;
 }
 
 //Sticky Footer CSS from https://getbootstrap.com/examples/sticky-footer/sticky-footer.css
@@ -321,7 +325,7 @@
 /* The company logo */
 
 .footer-distributed h3{
-	color:  rebeccapurple;
+	color:  #7EC0EE;
 	margin: 0;
     font-size: 36px;
 }
@@ -391,7 +395,7 @@
 }
 
 .footer-distributed .footer-center p a{
-	color:  rebeccapurple;
+	color:  #7EC0EE;
 	text-decoration: none;;
 }
 

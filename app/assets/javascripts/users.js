@@ -13,8 +13,8 @@ function toggleNav()
     /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
     else 
     {
-        document.getElementById("MainDashMenu").style.width = "200px";
-        document.getElementById("Main").style.marginLeft = "200px";
+        document.getElementById("MainDashMenu").style.width = "140px";
+        document.getElementById("Main").style.marginLeft = "140px";
     }
     
     check = !check;
