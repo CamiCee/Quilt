@@ -3,6 +3,264 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+                                          /* Dashboard */
+
+/*
+//Navigation Bar from https://blackrockdigital.github.io/startbootstrap-sb-admin/index.html
+
+//Removed body tag
+//Changed background color
+//Changed content
+*/
+
+/*!
+ * Start Bootstrap - SB Admin (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 0;
+}
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 200px;
+    }
+
+    #page-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    background-color: #7EC0EE;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 51px;
+        left: 200px;
+        width: 140px;
+        margin-left: -200px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        background-color: white;
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+        border-right: 1px solid #7EC0EE;
+    }
+
+    .side-nav>li>a {
+        width: 200px;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #7EC0EE !important;
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #999;
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #7EC0EE;
+}
+
+/*Custom CSS*/
+
+.DashNav 
+{
+    background-color: #182D32;
+    border-bottom: 1px solid #7EC0EE;
+}
+
+.DashLink
+{
+    color: inherit;
+    font-family: Helvetica;
+    font-size: 1.3em;
+}
+      
+
+.DashLinkList
+{
+    color: white;
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-top: 3%;
+    list-style: none;
+    padding-bottom: 3%;
+    background-color: #182D32;
+}
+
+.DashLinkList:hover 
+{
+    background-color: #7EC0EE;
+    border-left: 3px solid white;
+}
+
+.DashLinkList:hover .DashLink
+{
+     color: white;
+     text-decoration: none; 
+}
+
+.DashLinkList:hover .fa
+{
+    color: white;
+}
+
+
+.DashLinkActive 
+{
+    color: white;
+    background-color: #7EC0EE;
+}
+
+#MainDashMenu li 
+{
+    display: list-item;
+}
+
+
+.MessageIcon
+{
+    color:inherit;
+    font-size: 18px;
+}
+
+.MessageIcon:hover
+{
+    color:white;
+    list-style: none;
+}
+
+.MessageCount
+{
+    position: absolute;
+    top: 2%;
+}
+
+
+.NotificationIcon
+{
+    color: inherit;
+    font-size: 18px;
+}
+
+.NotificationIcon:hover
+{
+   color:white;
+   list-style: none;
+}
+
+.NotificationCount
+{
+    position: absolute;
+    top: 2%;
+}
+
+
+
 //Custom Content
 
 
@@ -14,13 +272,14 @@
     padding: 15px 15px;
     font-size: 18px;
     line-height: 20px;
+    margin-left: 70px;
 }
 
 .ToggleIcon:hover
 {
     cursor:pointer;
-    background-color: #340451; 
-    border-bottom: 1px solid rebeccapurple;
+    background-color: #182D32; 
+    border-bottom: 1px solid #7EC0EE;
 }
 
 .ToggleColor
@@ -28,4 +287,69 @@
     color: white;
 }
 
+
+.Username
+{
+    color: white;
+}
+
+
+//Groups
+
+.Post
+{
+    width: 98%;
+}
+
+.Other
+{
+    background-color: white;
+}
+
+.PostItem
+{
+    display: inline;
+}
+
+.PostName
+{
+    font-weight: bold;
+}
+
+.PostTime
+{
+  color: silver;  
+}
+
+.PostImg
+{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin-right: 3%;
+}
+
+.PostText
+{
+    overflow: hidden; 
+}
+
+.PostZone
+{
+    height: 90%;
+    
+}
+
+.PostIn
+{
+    width: 98%;
+    
+}
+
+.PostForm
+{
+    position: fixed;
+    bottom: 20px;
+}
 

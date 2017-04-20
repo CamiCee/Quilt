@@ -73,7 +73,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id = "MainDashMenu" class="nav navbar-nav side-nav DashNav">
              
-                    <li class = "DashLinkActive DashLinkList">
+                    <li class = "DashLinkList">
                          <%= link_to '<i class="fa fa-home" aria-hidden="true"></i> Home'.html_safe,"../dashboard", class: "DashLink"  %>
                     </li>
                     
@@ -81,7 +81,7 @@
                         <%= link_to '<i class="fa fa-commenting" aria-hidden="true"></i> Chat'.html_safe,"../dashboard/chat", class: "DashLink"  %>
                     </li>
                     
-                    <li class = "DashLinkList">
+                    <li class = "DashLinkActive DashLinkList">
                         <%= link_to '<i class="fa fa-weixin" aria-hidden="true"></i> Group'.html_safe,"../dashboard/group", class: "DashLink"  %>
                     </li>
                     
@@ -101,9 +101,51 @@
         
     
        
-    <!-- Home --> 
+    <!-- Groups --> 
     
     <section id="Main">
+        <section id = "PostZone">
+            
+            <div class = "Post well Other">
+                <%= image_tag("Stock.jpg" ,class: "PostImg", alt: "User Image") %>  
+                
+                <div class = "PostTop">
+                    <p class = "PostName PostItem">Username</p> &nbsp; <p class = "PostTime PostItem">Time</p>
+                </div>
+                
+                <div class = "PostText">
+                    <p>Busey ipsum dolor sit amet. You ever roasted doughnuts?Sometimes horses cough and fart at the same time, so stay out of the range of its butt muscle because a horses butt muscle is thick.I wrestled a bear once. A 750lbs black bear.Have you urinated? Have you drained your bladder? Are you free? Because if you haven't it will only come out later. I'm giving you some information that your bodily fluids may penetrate your clothing fibre's without warning. </p>
+                </div>
+            </div>
+            
+            <div class = "Post well">
+                <%= image_tag("Stock2.jpg" ,class: "PostImg", alt: "User Image") %>  
+                
+                <div class = "PostTop">
+                    <p class = "PostName PostItem">You</p> &nbsp; <p class = "PostTime PostItem">Time</p>
+                </div>
+                
+                <div class = "PostText">
+                    <p>Busey ipsum dolor sit amet. You ever roasted doughnuts?Sometimes horses cough and fart at the same time, so stay out of the range of its butt muscle because a horses butt muscle is thick.I wrestled a bear once. A 750lbs black bear.Have you urinated? Have you drained your bladder? Are you free? Because if you haven't it will only come out later. I'm giving you some information that your bodily fluids may penetrate your clothing fibre's without warning. </p>
+                </div>
+                
+            </div>
+           
+            
+            <%= form_tag "public#index", :method => :put, :class => 'PostForm' do |f|%>
+                <div class="input-group PostIn">
+                    <span class="input-group-btn">
+                        <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+                              <i class="fa fa-weixin" aria-hidden="true"></i>
+                        <% end %>
+                    </span>
+                    
+                    <%= text_field_tag(:post,"", class: "RegInput form-control", autofocus: true ) %>
+                </div>
+            <% end %>
+           
+        
+        </section>
       
     </section>
     
