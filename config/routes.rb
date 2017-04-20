@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get '/dashboard/group' => 'group#index'
     get '/dashboard/calendar' => 'calendar#index'
     get '/dashboard/admin' => 'admin#index'
- 
+    get '/users/logout' => 'users#logout'
  
 
 end
